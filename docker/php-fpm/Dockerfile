@@ -2,7 +2,7 @@
 #https://github.com/Cyber-Duck/php-fpm-laravel/blob/8.1/Dockerfile
 FROM php:8.1-fpm
 
-MAINTAINER support@cyber-duck.co.uk
+# MAINTAINER support@cyber-duck.co.uk
 
 ENV COMPOSER_MEMORY_LIMIT='-1'
 
@@ -27,7 +27,8 @@ RUN apt-get update && \
         libgmp-dev \
         mariadb-client \
         unzip \
-        nodejs
+        nodejs \
+        npm
 
 # Install soap extention
 RUN docker-php-ext-install soap
